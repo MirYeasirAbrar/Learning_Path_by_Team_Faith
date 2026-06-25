@@ -39,7 +39,7 @@ Each folder contains:
 
 ## 📚 Reference
 
-Course: HTML & CSS Full Course by SuperSimpleDev
+Course: [HTML & CSS Full Course by SuperSimpleDev](https://www.youtube.com/watch?v=G3e-cpL7ofc&t=150s)
 
 ## 🚀 Motto
 
