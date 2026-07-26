@@ -11,11 +11,11 @@ int main()
 
     for(int i=0; i<N; i++)
     {
-        cin >> a[N];
+        cin >> a[i];
     }
     for(int i=0; i<N; i++)
     {
-        cin >> b[N];
+        cin >> b[i];
     }
     
     sort(a,a + N);
