@@ -1,0 +1,64 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    // Optimize standard I/O operations for performance
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n, q;
+    cin >> n >> q;
+    
+    string s;
+    cin >> s;
+
+    while (q--) {
+        string query;
+        cin >> query;
+
+        if (query == "pop_back") {
+            s.pop_back();
+        } 
+        else if (query == "front") {
+            cout << s.front() << "\n";
+        } 
+        else if (query == "back") {
+            cout << s.back() << "\n";
+        } 
+        else if (query == "sort") {
+            int l, r;
+            cin >> l >> r;
+            if (l > r) swap(l, r);
+            // 1-based to 0-based conversion: range is [l-1, r)
+            sort(s.begin() + l - 1, s.begin() + r);
+        } 
+        else if (query == "reverse") {
+            int l, r;
+            cin >> l >> r;
+            if (l > r) swap(l, r);
+            reverse(s.begin() + l - 1, s.begin() + r);
+        } 
+        else if (query == "print") {
+            int pos;
+            cin >> pos;
+            cout << s[pos - 1] << "\n";
+        } 
+        else if (query == "substr") {
+            int l, r;
+            cin >> l >> r;
+            if (l > r) swap(l, r);
+            // length = r - l + 1
+            cout << s.substr(l - 1, r - l + 1) << "\n";
+        } 
+        else if (query == "push_back") {
+            char x;
+            cin >> x;
+            s.push_back(x);
+        }
+    }
+
+    return 0;
+}
